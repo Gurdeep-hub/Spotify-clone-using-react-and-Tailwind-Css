@@ -2,10 +2,10 @@ import { assets } from '../assets/assets'
 
 export function Sidebar() {
     return (
-        // 1. MAIN SIDEBAR CONTAINER (Stacks the top card and bottom card vertically)
+       
         <div className="w-[25%] h-full p-2 flex flex-col gap-2 text-white hidden lg:flex">
             
-            {/* 2. TOP CARD: Navigation (Home & Search) */}
+          
             <div className="bg-[#121212] h-[15%] rounded flex flex-col justify-center gap-4">
                 <div className="flex items-center gap-3 pl-8 cursor-pointer">
                     <img className='w-6' src={assets.home_icon} alt="Home" />
@@ -15,9 +15,9 @@ export function Sidebar() {
                     <img className='w-6' src={assets.search_icon} alt="Search" />
                     <p className='font-bold'>Search</p>
                 </div>
-            </div> {/* <-- Closed properly here! */}
+            </div> 
 
-            {/* 3. BOTTOM CARD: Library Section */}
+            
             <div className='bg-[#121212] h-[85%] rounded p-4'>
                 <div className='flex items-center justify-between'>
                     <div className='flex items-center gap-3 cursor-pointer'>
@@ -41,7 +41,7 @@ export function Sidebar() {
                     </div>
                 
                 
-                {/* You can start listing playlists or albums down here! */}
+               
             </div>
 
         </div>
