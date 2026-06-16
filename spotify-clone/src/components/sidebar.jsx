@@ -1,0 +1,49 @@
+import { assets } from '../assets/assets'
+
+export function Sidebar() {
+    return (
+        // 1. MAIN SIDEBAR CONTAINER (Stacks the top card and bottom card vertically)
+        <div className="w-[25%] h-full p-2 flex flex-col gap-2 text-white hidden lg:flex">
+            
+            {/* 2. TOP CARD: Navigation (Home & Search) */}
+            <div className="bg-[#121212] h-[15%] rounded flex flex-col justify-center gap-4">
+                <div className="flex items-center gap-3 pl-8 cursor-pointer">
+                    <img className='w-6' src={assets.home_icon} alt="Home" />
+                    <p className='font-bold'>Home</p>
+                </div>
+                <div className="flex items-center gap-3 pl-8 cursor-pointer">
+                    <img className='w-6' src={assets.search_icon} alt="Search" />
+                    <p className='font-bold'>Search</p>
+                </div>
+            </div> {/* <-- Closed properly here! */}
+
+            {/* 3. BOTTOM CARD: Library Section */}
+            <div className='bg-[#121212] h-[85%] rounded p-4'>
+                <div className='flex items-center justify-between'>
+                    <div className='flex items-center gap-3 cursor-pointer'>
+                        <img className='w-8' src={assets.stack_icon} alt="Library" /> {/* Fixed 'width-8' to 'w-8' */}
+                        <p className='font-semibold'>Your Library</p>
+                    </div>
+                    <div className='flex items-center gap-3'>
+                        <img className='w-5' src={assets.arrow_icon} alt="" />
+                        <img className='w-5' src={assets.plus_icon} alt="" />
+                    </div>
+                    </div>
+                    <div className='p-4 bg-[#242424] m-2 rounded font-semibold flex flex-col items-start justify-start gap-1 pl-4'>
+                        <h1>Create your first playlist</h1>
+                        <p className='font-light'>It's easy we will help you</p>
+                        <button className='px-4 py-1.5 bg-white text-[15px] text-black rounded-full mt-4'>Create Playlist</button>
+                    </div>
+                    <div className='p-4 bg-[#242424] m-2 rounded font-semibold flex flex-col items-start justify-start gap-1 pl-4 mt-4'>
+                        <h1>Lets find some podcast to follow</h1>
+                        <p className='font-light'>we will keep you updated on new episodes</p>
+                        <button className='px-4 py-1.5 bg-white text-[15px] text-black rounded-full mt-4'>Browse Podcast</button>
+                    </div>
+                
+                
+                {/* You can start listing playlists or albums down here! */}
+            </div>
+
+        </div>
+    )
+}
